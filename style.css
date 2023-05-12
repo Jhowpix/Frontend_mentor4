@@ -34,15 +34,26 @@ body, html{
   color: hsl(236, 13%, 42%);
 }
 
+.menu{
+  display: none;
+}
+
+nav{
+  display: block;
+}
+
 #logo{
   width: 5% ;
   height: 5%;
 }
 
+main{
+  width: auto;
+}
+
 #imgMain{
-  position: relative;
-  width: 100%;
-  height: 60%;
+  width: 48rem;
+  height: 18rem;
 }
 
 header{
@@ -76,14 +87,16 @@ h1{
   font-size: 14px;
   letter-spacing: 1mm;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 #textBright{
-  position: absolute;
+  position: relative;
   width: 280px;
   font-size: 46px;
   font-weight:800;
   color: hsl(240, 100%, 5%);
+  margin-right: 30px;
 }
 
 #textMain{ 
@@ -92,9 +105,8 @@ h1{
 }
 
 #textMain> div{
-  position: absolute;
   width: 390px;
-  margin: 0px 10px 30px 320px;
+  margin: ;
   letter-spacing: 0.2mm;
   line-height: 24px;
 }
@@ -107,9 +119,9 @@ aside{
 }
 
 aside > h1{
-  font-size: 40px;
+  font-size: 46px;
   color: hsl(35, 77%, 62%);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 aside > h3{
@@ -127,7 +139,7 @@ footer{
 }
 
 .imgFooter{
-width: 38%;
+width: 40%;
 height: 65%;
 margin-right: 20px;
 }
@@ -138,6 +150,7 @@ margin-right: 20px;
 }
 
 .textFooter> h1{
+  font-size: 42px;
   margin-bottom: 10px;
   color: hsl(236, 13%, 42%);
 }
@@ -153,4 +166,135 @@ margin-right: 20px;
 
 .atribution{
   display: block;
+}
+
+@media screen and (max-width: 1160px){
+
+  body{
+    margin: 10px;
+  }
+
+  main{
+    width: 70%;
+  }
+
+  #imgMain{
+    width: 99%;
+  }
+
+  aside{
+    width: 400px;
+  }
+
+}
+
+@media screen and (max-width: 880px){
+
+   footer{
+    margin-bottom: 30px;
+   }
+
+   .textFooter> h1{
+    font-size: 38px;
+  }
+
+  .imgFooter{
+    width: 45%;
+    height: 70%;
+    margin-right: 10px;
+    margin-top: 60px;
+    }
+
+    footer{
+      scale: 0.9;
+    }
+
+}
+
+@media screen and (max-width: 790px){
+
+   body{
+    margin: 0px;
+   }
+
+   .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+    
+   main{
+    width: 100%;
+   }
+
+   #imgMain{
+    width: 100%;
+
+    height: 35%;
+   }
+
+   #textMain{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   }
+
+   #textBright{
+    font-size: 42px;
+    width: 80%;
+    margin: none;
+   }
+
+   #textMain> div{
+    width: 80%;
+    margin: none;
+   }
+
+   aside{
+    margin-top: 20px;
+    width: 100%;
+   }
+
+   footer{
+    display: flex;
+    flex-direction: column;
+   }
+
+   .imgFooter{
+    width: 30%;
+    height: 70%;
+    margin-right: 20px;
+    margin-top: 20px;
+    }
+ 
+}
+
+@media screen and (max-width: 550px){
+
+   #logo{
+    width: 20%;
+   }
+
+   .menu{
+    display: block;
+    
+   }
+
+    nav{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    margin-left: 20px;
+    margin: 8px;
+    transition: 0.4s;
+  }
+
+   nav{
+    display:none;
+   }
+
+  footer{
+    scale: 0.8;
+  }
+
 }
